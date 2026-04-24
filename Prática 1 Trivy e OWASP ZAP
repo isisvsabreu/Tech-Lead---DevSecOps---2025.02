@@ -1,71 +1,47 @@
-Microsoft Windows [versão 10.0.26200.8246]
-(c) Microsoft Corporation. Todos os direitos reservados.
-
-C:\Windows\System32>trivy --version
-Version: 0.70.0
-
-C:\Windows\System32>docker pull bkimminich/juice-shop
-Using default tag: latest
-Error response from daemon: Docker Desktop is unable to start
-
-C:\Windows\System32>docker pull bkimminich/juice-shop
-Using default tag: latest
-Error response from daemon: Docker Desktop is unable to start
-
-C:\Windows\System32>docker pull bkimminich/juice-shop
+isisv@DELLPRO16:/$ docker pull bkimminich/juice-shop
 Using default tag: latest
 latest: Pulling from bkimminich/juice-shop
-bdfd7f7e5bf6: Pull complete
 b4e6f1bfce0a: Pull complete
-4ec36cb7292a: Pull complete
-142f89355a3a: Pull complete
-7cc70dfd88cf: Pull complete
-7d664d9802de: Pull complete
+01639daf4ea0: Pull complete
+fa8ae93e2b3a: Pull complete
+c172f21841df: Pull complete
+b4242723c53f: Pull complete
 d6b1b89eccac: Pull complete
+4ec36cb7292a: Pull complete
 b73b1097e3a1: Pull complete
+2780920e5dbf: Pull complete
 bd8962e29291: Pull complete
 7c12895b777b: Pull complete
-52630fc75a18: Pull complete
-b839dfae01f6: Pull complete
-dd64bf2dd177: Pull complete
-8224d91da70b: Pull complete
-3214acf345c0: Pull complete
-2780920e5dbf: Pull complete
-fa8ae93e2b3a: Pull complete
-1a4be5562d92: Pull complete
-ebddc55facdc: Pull complete
-01639daf4ea0: Pull complete
-c172f21841df: Pull complete
-dd0d9bfd3bee: Pull complete
-b4242723c53f: Pull complete
 cac2ae0193cb: Pull complete
+3214acf345c0: Pull complete
+dd0d9bfd3bee: Pull complete
+dd64bf2dd177: Pull complete
+b839dfae01f6: Pull complete
+7cc70dfd88cf: Pull complete
+bdfd7f7e5bf6: Pull complete
+8224d91da70b: Pull complete
+142f89355a3a: Pull complete
+ebddc55facdc: Pull complete
+1a4be5562d92: Pull complete
+52630fc75a18: Pull complete
+7d664d9802de: Pull complete
 d58f7981a01a: Download complete
 Digest: sha256:a8139c141311c7f31fcf2e611125246928f703ee42827de33983fd9425d1b2f6
 Status: Downloaded newer image for bkimminich/juice-shop:latest
 docker.io/bkimminich/juice-shop:latest
-
-What's next:
-    View a summary of image vulnerabilities and recommendations → docker scout quickview bkimminich/juice-shop
-
-C:\Windows\System32>docker run -d --name juiceshop -p 3000:3000 bkimminich/juice-shop
-344ccf46b11a79fb363882ea5a29f7de7b400796dcf19b50455d97e43bbbc895
-
-C:\Windows\System32>trivy image bkimminich/juice-shop
-2026-04-24T15:31:16-03:00       INFO    [vulndb] Need to update DB
-2026-04-24T15:31:16-03:00       INFO    [vulndb] Downloading vulnerability DB...
-2026-04-24T15:31:16-03:00       INFO    [vulndb] Downloading artifact...        repo="mirror.gcr.io/aquasec/trivy-db:2"
-7.23 MiB / 91.27 MiB [------------>_____________________________________________________________________________________91.27 MiB / 91.27 MiB [-------------------------------------------------------------------] 100.00% 743.96 KiB p/s 2m6s
-2026-04-24T15:33:26-03:00       INFO    [vulndb] Artifact successfully downloaded       repo="mirror.gcr.io/aquasec/trivy-db:2"
-2026-04-24T15:33:26-03:00       INFO    [vuln] Vulnerability scanning is enabled
-2026-04-24T15:33:26-03:00       INFO    [secret] Secret scanning is enabled
-2026-04-24T15:33:26-03:00       INFO    [secret] If your scanning is slow, please try '--scanners vuln' to disable secret scanning
-2026-04-24T15:33:26-03:00       INFO    [secret] Please see https://trivy.dev/docs/v0.70/guide/scanner/secret#recommendation for faster secret detection
-2026-04-24T15:33:34-03:00       INFO    Detected OS     family="debian" version="13.4"
-2026-04-24T15:33:34-03:00       INFO    [debian] Detecting vulnerabilities...   os_version="13" pkg_num=13
-2026-04-24T15:33:34-03:00       INFO    Number of language-specific files       num=1
-2026-04-24T15:33:34-03:00       INFO    [node-pkg] Detecting vulnerabilities...
-2026-04-24T15:33:34-03:00       WARN    Using severities from other vendors for some vulnerabilities. Read https://trivy.dev/docs/v0.70/guide/scanner/vulnerability#severity-selection for details.
-2026-04-24T15:33:34-03:00       INFO    Table result includes only package filenames. Use '--format json' option to get the full path to the package file.
+isisv@DELLPRO16:/$ docker run -d --name juiceshop -p 3000:3000 bkimminich/juice-shop
+110d4c09443c31d4a91d14d64f1d2d26a236271383d69ebd3c88d32ed15bcfb2
+isisv@DELLPRO16:/$ trivy image bkimminich/juice-shop
+2026-04-24T18:48:11-03:00       INFO    [vuln] Vulnerability scanning is enabled
+2026-04-24T18:48:11-03:00       INFO    [secret] Secret scanning is enabled
+2026-04-24T18:48:11-03:00       INFO    [secret] If your scanning is slow, please try '--scanners vuln' to disable secret scanning
+2026-04-24T18:48:11-03:00       INFO    [secret] Please see https://trivy.dev/docs/v0.70/guide/scanner/secret#recommendation for faster secret detection
+2026-04-24T18:48:11-03:00       INFO    Detected OS     family="debian" version="13.4"
+2026-04-24T18:48:11-03:00       INFO    [debian] Detecting vulnerabilities...   os_version="13" pkg_num=13
+2026-04-24T18:48:11-03:00       INFO    Number of language-specific files       num=1
+2026-04-24T18:48:11-03:00       INFO    [node-pkg] Detecting vulnerabilities...
+2026-04-24T18:48:11-03:00       WARN    Using severities from other vendors for some vulnerabilities. Read https://trivy.dev/docs/v0.70/guide/scanner/vulnerability#severity-selection for details.
+2026-04-24T18:48:11-03:00       INFO    Table result includes only package filenames. Use '--format json' option to get the full path to the package file.
 
 Report Summary
 
@@ -2377,7 +2353,7 @@ Legend:
 
 
 bkimminich/juice-shop (debian 13.4)
-===================================
+
 Total: 13 (UNKNOWN: 0, LOW: 7, MEDIUM: 6, HIGH: 0, CRITICAL: 0)
 
 ┌─────────┬──────────────────┬──────────┬──────────────┬─────────────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
@@ -2435,7 +2411,7 @@ Total: 13 (UNKNOWN: 0, LOW: 7, MEDIUM: 6, HIGH: 0, CRITICAL: 0)
 └─────────┴──────────────────┴──────────┴──────────────┴─────────────────────────────┴───────────────┴──────────────────────────────────────────────────────────────┘
 
 Node.js (node-pkg)
-==================
+
 Total: 83 (UNKNOWN: 0, LOW: 5, MEDIUM: 25, HIGH: 44, CRITICAL: 9)
 
 ┌─────────────────────────────────────┬─────────────────────┬──────────┬──────────┬───────────────────┬─────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────┐
@@ -2744,75 +2720,74 @@ Total: 83 (UNKNOWN: 0, LOW: 5, MEDIUM: 25, HIGH: 44, CRITICAL: 9)
 └─────────────────────────────────────┴─────────────────────┴──────────┴──────────┴───────────────────┴─────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────┘
 
 /juice-shop/build/lib/insecurity.js (secrets)
-=============================================
+
 Total: 1 (UNKNOWN: 0, LOW: 0, MEDIUM: 0, HIGH: 1, CRITICAL: 0)
 
 HIGH: AsymmetricPrivateKey (private-key)
-════════════════════════════════════════
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 Asymmetric Private Key
-────────────────────────────────────────
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
  /juice-shop/build/lib/insecurity.js:47 (offset: 2835 bytes) (added by 'COPY --chown=65532:0 /juice-shop . # bui')
-────────────────────────────────────────
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
   45   const z85 = __importStar(require("z85"));
   46   exports.publicKey = node_fs_1.default ? node_fs_1.default.readFileSync('encryptionkeys/jwt.pub', 'ut
   47 [ ----BEGIN RSA PRIVATE KEY-----****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************-----END RSA PRIVATE
   48   const hash = (data) => node_crypto_1.default.createHash('md5').update(data).digest('hex');
-────────────────────────────────────────
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 
 
 
 /juice-shop/frontend/src/app/app.guard.spec.ts (secrets)
-========================================================
+
 Total: 1 (UNKNOWN: 0, LOW: 0, MEDIUM: 1, HIGH: 0, CRITICAL: 0)
 
 MEDIUM: JWT (jwt-token)
-════════════════════════════════════════
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 JWT token
-────────────────────────────────────────
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
  /juice-shop/frontend/src/app/app.guard.spec.ts:38 (offset: 1466 bytes) (added by 'COPY --chown=65532:0 /juice-shop . # bui')
-────────────────────────────────────────
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
   36
   37     it('returns payload from decoding a valid JWT', inject([LoginGuard], (guard: LoginGuard) => {
   38 [ ocalStorage.setItem('token', '***********************************************************************************************************************************************************')
   39       expect(guard.tokenDecode()).toEqual({
-────────────────────────────────────────
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 
 
 
 /juice-shop/frontend/src/app/last-login-ip/last-login-ip.component.spec.ts (secrets)
-====================================================================================
+
 Total: 1 (UNKNOWN: 0, LOW: 0, MEDIUM: 1, HIGH: 0, CRITICAL: 0)
 
 MEDIUM: JWT (jwt-token)
-════════════════════════════════════════
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 JWT token
-────────────────────────────────────────
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
  /juice-shop/frontend/src/app/last-login-ip/last-login-ip.component.spec.ts:61 (offset: 2220 bytes) (added by 'COPY --chown=65532:0 /juice-shop . # bui')
-────────────────────────────────────────
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
   59
   60     xit('should set Last-Login IP from JWT as trusted HTML', () => { // FIXME Expected state seems to
   61 [ ocalStorage.setItem('token', '*******************************************************************************************************************************')
   62       component.ngOnInit()
-────────────────────────────────────────
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 
 
 
 /juice-shop/lib/insecurity.ts (secrets)
-=======================================
+
 Total: 1 (UNKNOWN: 0, LOW: 0, MEDIUM: 0, HIGH: 1, CRITICAL: 0)
 
 HIGH: AsymmetricPrivateKey (private-key)
-════════════════════════════════════════
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 Asymmetric Private Key
-────────────────────────────────────────
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
  /juice-shop/lib/insecurity.ts:23 (offset: 860 bytes) (added by 'COPY --chown=65532:0 /juice-shop . # bui')
-────────────────────────────────────────
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
   21
   22   export const publicKey = fs ? fs.readFileSync('encryptionkeys/jwt.pub', 'utf8') : 'placeholder-publi
   23 [ ----BEGIN RSA PRIVATE KEY-----****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************-----END RSA PRIVATE
   24
-────────────────────────────────────────
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 
 
-
-C:\Windows\System32>trivy image bkimminich/juice-shop
+isisv@DELLPRO16:/$
